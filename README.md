@@ -56,13 +56,13 @@ Para usá-lo, configure seu maven-checkstyle-plugin da seguinte maneira:
        </dependency>
      </dependencies>
      <configuração>
-       <configLocation> zup_checks.xml </configLocation>
+       <configLocation>zup_checks.xml</configLocation>
        
        <! - Os seguintes parâmetros são opcionais: ->
-       <consoleOutput> true </consoleOutput>
-       <failOnViolation> true </failOnViolation>
-       <logViolationsToConsole> true </logViolationsToConsole>
-       erro <violationSeverity> </violationSeverity>
+       <consoleOutput>true</consoleOutput>
+       <failOnViolation>true</failOnViolation>
+       <logViolationsToConsole>true</logViolationsToConsole>
+       <violationSeverity>error</violationSeverity>
      </configuration>
      <execuções>
        <execução>
