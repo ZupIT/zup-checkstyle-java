@@ -10,7 +10,7 @@ Visão geral do Checkstyle
 O Checkstyle é uma ferramenta de desenvolvimento que ajuda nós =programadores a escrever código Java(e outras linguagens) de forma aderente a um padrão de codificação.
 As seguintes linhas são citadas no site oficial do Checkstyle :
 
-- O Checkstyle é uma ferramenta de desenvolvimento para ajudar os programadores a escrever código Java que segue um padrão de codificação.
+- O Checkstyle é uma ferramenta de desenvolvimento para ajudar os programadores a escrever código Java que seguindo um padrão sólido e unificado de codificação.
 
 Ele automatiza o processo de verificação do código Java para poupar os humanos desta tarefa chata (mas importante). 
 Isso o torna ideal para projetos que desejam aplicar um padrão de codificação.
