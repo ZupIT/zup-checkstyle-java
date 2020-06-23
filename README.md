@@ -27,8 +27,8 @@ executar verificações em tempo real enquanto escreve o código-fonte.
 
 Se você deseja incorporar o Checkstyle nas ferramentas de construção, use maven e gradle. Ambos são ferramentas de construção usadas com frequência e fornecem uma tarefa para o Checkstyle por padrão, que pode ser usada para facilitar a integração. Ao incorporar nas ferramentas de construção, você pode verificar se o código-fonte de um projeto está sempre em conformidade com o padrão de codificação.
 
-No entanto, a integração em uma ferramenta de construção cria uma restrição muito forte: mesmo um pequeno problema impede que o código seja mesclado. Pode ser melhor usar serviços da Web dedicados a essa causa, como o SideCI, para projetos existentes com o Checkstyle ainda não implementado ou quando um padrão de codificação não é imposto de maneira tão estrita.
-Como é possível verificar com um processo IDE e um IC (ferramenta de construção ou SideCI) usando um único arquivo XML, recomendamos que você incorpore os dois métodos de verificação em um projeto.
+No entanto, a integração em uma ferramenta de construção cria uma restrição muito forte: mesmo um pequeno problema impede que o código seja mesclado. Pode ser melhor usar serviços da Web dedicados a essa causa, como o Jenkins, para projetos existentes com o Checkstyle ainda não implementado ou quando um padrão de codificação não é imposto de maneira tão estrita.
+Como é possível verificar com um processo IDE e um IC (ferramenta de construção / Jenkins) usando um único arquivo XML, recomendamos que você incorpore os dois métodos de verificação em um projeto.
 
 
 Configuração de Uso do Zup Checkstyle
