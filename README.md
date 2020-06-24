@@ -31,6 +31,11 @@ No entanto, a integração em uma ferramenta de construção cria uma restriçã
 Como é possível verificar com um processo IDE e um IC (ferramenta de construção / Jenkins) usando um único arquivo XML, recomendamos que você incorpore os dois métodos de verificação em um projeto.
 
 
+Status do Projeto
+================================
+Neste projeto foram criados inicialmente dois arquivos de checkstyle:
+
+
 Configuração de Uso do Zup Checkstyle
 ================================
 
