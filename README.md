@@ -66,32 +66,31 @@ Para usá-lo, configure seu maven-checkstyle-plugin da seguinte maneira:
    <plugin>
      <artifactId> projeto-zup-plugin </artifactId>
      <versão> 1.0.0 </ versão>
-     <dependências>
+     <dependencies>
        <dependência>
          <groupId> br.zup.com.projeto.plugin </groupId>
          <artifactId> projeto-zup-plugin </artifactId>
-         <versão> 1.0.0 </version>
+         <version> 1.0.0 </version>
        </dependency>
-       <dependência>
+       <dependency>
          <groupId> com.puppycrawl.tools </groupId>
          <artifactId> checkstyle </artifactId>
-         <versão> 8.24 </ versão>
+         <version> 8.24 </ version>
        </dependency>
      </dependencies>
-     <configuração>
-       <configLocation>zup_checks.xml</configLocation>
-       
+     <configuration>
+       <configLocation>zup_checkstyle.xml</configLocation>
        <! - Os seguintes parâmetros são opcionais: ->
        <consoleOutput>true</consoleOutput>
        <failOnViolation>true</failOnViolation>
        <logViolationsToConsole>true</logViolationsToConsole>
        <violationSeverity>error</violationSeverity>
      </configuration>
-     <execuções>
-       <execução>
+     <executions>
+       <execution>
          <id>validate</id>
          <phase>validate</phase>
-         <objetivos>
+         <goals>
            <goal>check</goal>
          </goals>
        </execution>
@@ -106,11 +105,11 @@ Internamente, temos a configuração acima na seção `<pluginManagement />` de 
 pom principal da Zup, o que significa que os projetos precisam apenas especificar o seguinte em seus
 Seção `<build> <plugins>`:
 
-`` ``
+````
    <plugin>
       <artifactId> maven-checkstyle-plugin </artifactId>
    </plugin>
-`` ``
+````
 
 # Configuração
 
@@ -125,9 +124,6 @@ para projetos com vários módulos, provavelmente é uma boa ideia usar algo
 como [esta solução] (http://stackoverflow.com/a/19690484/1659929) para compartilhar
 a configuração entre cada submódulo.
 
-# IDEA support
-
-Há um [arquivo de configuração para o IntelliJ IDEA] (src/main/resources/zup_checks.xml) que você pode importar para o seu projeto.
 
 # Código de conduta
 Este projeto segue o [Código de Conduta Aberto] [código de conduta]. Ao participar, espera-se que você respeite esse código.
