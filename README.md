@@ -1,11 +1,15 @@
-Nota do Projeto
-================================
+
+# ZUP JAVA CHECKSTYLE
+![Checkstyle](imgs/checkstyle.png)
+
+Este repositório tem como objetivo servir todos Devs Java da Zup a implementar boas práticas de convenção de código em projetos Java. O checkstyle é uma ferramenta que auxilia seu projeto a seguir uma convenção de código configurada por desenvolvedores. O objetivo é garantir a legibilidade do código
+
+## Nota do Projeto
+
 Este projeto visa ser um manual vivo, iterativo, e em constante construção por todos os Zuppers.
 Portanto, contribua! Deixe suas idéias e defenda o que deve ser levado em conta como padrão de códificação.
 
-
-Visão geral do Checkstyle
-================================
+## Visão geral do Checkstyle
 
 O Checkstyle é uma ferramenta de desenvolvimento que ajuda nós =programadores a escrever código Java(e outras linguagens) de forma aderente a um padrão de codificação.
 As seguintes linhas são citadas no site oficial do Checkstyle :
@@ -31,8 +35,8 @@ No entanto, a integração em uma ferramenta de construção cria uma restriçã
 Como é possível verificar com um processo IDE e um IC (ferramenta de construção / Jenkins) usando um único arquivo XML, recomendamos que você incorpore os dois métodos de verificação em um projeto.
 
 
-Status do Projeto
-================================
+## Status do Projeto
+
 Neste projeto foram criados inicialmente dois arquivos de checkstyle:
 - /src/main/resources/zup_checkstyle.xml
 - /src/main/resources/zup_checkstyle_full.xml
@@ -54,9 +58,7 @@ Assim, novamente, fique a vontade para incluir novas regras no zup_checkstyle_fu
 - Importante ressaltar que o arquivo de checkstyle padrão é o zup_checkstyle.xml
  
 
-Configuração de Uso do Zup Checkstyle
-================================
-
+## Configuração de Uso do Zup Checkstyle
 
 Este projeto fornece uma configuração padrão para o estilo de verificação de códigos da Zup.
 
@@ -111,9 +113,9 @@ Seção `<build> <plugins>`:
    </plugin>
 ````
 
-# Configuração
+## Configuração
 
-## Supressões
+### Supressões
 
 A configuração do plugin checkstyle que você obtém de `zup_checks.xml` diz para 
 opcionalmente, procure um arquivo chamado `suppressions.xml`, conforme
@@ -129,3 +131,8 @@ a configuração entre cada submódulo.
 Este projeto segue o [Código de Conduta Aberto] [código de conduta]. Ao participar, espera-se que você respeite esse código.
 
 [código de conduta]: https://github.com/klyff/zup-code-of-conduct/blob/master/code-of-conduct.md
+
+## Artigos relevantes
+
+ - [Java com Checkstyle](https://www.devmedia.com.br/java-com-checkstyle/26043)
+ - [How to Centralize your Checkstyle Configuration with Maven](https://codeburst.io/how-to-centralize-your-checkstyle-configuration-with-maven-7575eacd7295)
