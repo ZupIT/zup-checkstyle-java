@@ -54,6 +54,27 @@
                     STATIC_INIT, INSTANCE_INIT, METHOD_DEF, CTOR_DEF, VARIABLE_DEF"/>
             <property name="allowNoEmptyLineBetweenFields" value="true"/>
         </module>
+        <module name="EmptyCatchBlock">
+            <property name="exceptionVariableName" value="expected"/>
+        </module>
+
+        <module name="SuppressWithNearbyCommentFilter">
+            <property name="commentFormat" value="OK to catch (\w+)"/>
+            <property name="messageFormat" value="$1"/>
+            <property name="influenceFormat" value="-1"/>
+        </module>
+
+        <module name="IllegalCatch"/>
+        <module name="IllegalThrows"/>
+        <module name="ParameterAssignment"/>
+        <module name="WhitespaceAfter"/>
+        <module name="UnusedImports"/>
+        <module name="FinalParameters"/>
+        <module name="MethodLength">
+            <property name="max" value="35"/>
+            <property name="countEmpty" value="false"/>
+        </module>    
+            
     </module>
 
       <!-- Allow turning checks off in the code using @SuppressWarnings annotation -->
