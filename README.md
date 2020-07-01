@@ -136,3 +136,7 @@ Este projeto segue o [Código de Conduta Aberto] [código de conduta]. Ao partic
 
  - [Java com Checkstyle](https://www.devmedia.com.br/java-com-checkstyle/26043)
  - [How to Centralize your Checkstyle Configuration with Maven](https://codeburst.io/how-to-centralize-your-checkstyle-configuration-with-maven-7575eacd7295)
+
+
+### Mais Checkstyles:
+- https://github.com/singhalkul/java-quality-checks/blob/master/config/checkstyle/checkstyle.xml
