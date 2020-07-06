@@ -65,39 +65,59 @@ Este projeto fornece uma configuração padrão para o estilo de verificação d
 Para usá-lo, configure seu maven-checkstyle-plugin da seguinte maneira:
 
 ````
-   <plugin>
-     <artifactId> projeto-zup-plugin </artifactId>
-     <versão> 1.0.0 </ versão>
-     <dependencies>
-       <dependência>
-         <groupId> br.zup.com.projeto.plugin </groupId>
-         <artifactId> projeto-zup-plugin </artifactId>
-         <version> 1.0.0 </version>
-       </dependency>
-       <dependency>
-         <groupId> com.puppycrawl.tools </groupId>
-         <artifactId> checkstyle </artifactId>
-         <version> 8.24 </ version>
-       </dependency>
-     </dependencies>
-     <configuration>
-       <configLocation>zup_checkstyle.xml</configLocation>
-       <! - Os seguintes parâmetros são opcionais: ->
-       <consoleOutput>true</consoleOutput>
-       <failOnViolation>true</failOnViolation>
-       <logViolationsToConsole>true</logViolationsToConsole>
-       <violationSeverity>error</violationSeverity>
-     </configuration>
-     <executions>
-       <execution>
-         <id>validate</id>
-         <phase>validate</phase>
-         <goals>
-           <goal>check</goal>
-         </goals>
-       </execution>
-     </executions>
-   </plugin>
+ <artifactId>projeto-zup-plugin</artifactId>
+ <version>0.1.0-SNAPSHOT</version>
+ ...
+ <properties>
+     <java.version>14</java.version>
+     <checkstyle-maven-plugin.version>3.1.1</checkstyle-maven-plugin.version>
+ </properties>
+
+   <reporting>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-checkstyle-plugin</artifactId>
+              <version>3.1.1</version>
+              <configuration>
+                  <configLocation>${project.basedir}/checkstyle.xml</configLocation>
+                  <encoding>UTF-8</encoding>
+                  <consoleOutput>true</consoleOutput>
+                  <failsOnError>true</failsOnError>
+                  <linkXRef>true</linkXRef>
+                  <failOnViolation>true</failOnViolation>
+                  <enableFilesSummary>true</enableFilesSummary>
+              </configuration>
+          </plugin>
+      </plugins>
+  </reporting>
+     
+ <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>${checkstyle-maven-plugin.version}</version>
+            <executions>
+                <execution>
+                    <id>validate</id>
+                    <phase>validate</phase>
+                    <configuration>
+                        <configLocation>checkstyle.xml</configLocation>
+                        <encoding>UTF-8</encoding>
+                        <consoleOutput>true</consoleOutput>
+                        <failsOnError>false</failsOnError>
+                        <failOnViolation>true</failOnViolation>
+                        <violationSeverity>warning</violationSeverity>
+                    </configuration>
+                    <goals>
+                        <goal>check</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
 ````
 
 Consulte os [documentos do maven-checkstyle-plugin] (https://maven.apache.org/plugins/maven-checkstyle-plugin/check-mojo.html) 
