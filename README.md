@@ -37,25 +37,14 @@ Como é possível verificar com um processo IDE e um IC (ferramenta de construç
 
 ## Status do Projeto
 
-Neste projeto foram criados inicialmente dois arquivos de checkstyle:
-- /src/main/resources/zup_checkstyle.xml
-- /src/main/resources/zup_checkstyle_full.xml
+Neste projeto foram criados inicialmente um arquivo de checkstyle:
+- /src/main/resources/checkstyle.xml
 
-O Primeiro, zup_checkstyle.xml, faz uma analise de estilo básica mas que já visa qualidade de escrita.
+
+O checkstyle.xml faz uma analise de estilo básica mas que já visa qualidade de escrita.
  São verificados itens como quantidade de colunas/caracteres por linha (180),
- espaços entre valores e operadores, Quebra de linha após abertura de bloco {} e estrutura, definição de constantes, blocos vazios, estilo de declaração de listas e arrays
- , declaração de variaveis multiplas e ordem de modificadores.
+ espaços entre valores e operadores, Quebra de linha após abertura de bloco {} e estrutura, definição de constantes, blocos vazios, estilo de declaração de listas e arrays, declaração de variaveis multiplas e ordem de modificadores, e faz uma tratativa melhorada sobre os magicnumbers deixando-os mais flexiveis.
  
- Já o arquivo zup_checkstyle_full.xml traz uma abordagem extremamente mais rigida, como evitar imports com .* ou redundantes, acusa uso de caracteres de escape sendo utilizados
-  em construções de string repetidamente, o uso de valores numéricos soltos no código sem constantes (magic numbers?) até o nível de localização de Annotations e ordem de
-   declaração de metodos sobrecarregados (overloaded methods).
-   
-O Motivo de ambos os arquivos é para que em comunidade possamos decidir entre ambos os mundos quais validações de checkstyle são importantes para nosso contexto de trabalho e
- padronização.
- 
-Assim, novamente, fique a vontade para incluir novas regras no zup_checkstyle_full.xml, e a partir destas, indicar a inclusão de outras no zup_checkstyle.xml
-
-- Importante ressaltar que o arquivo de checkstyle padrão é o zup_checkstyle.xml
  
 
 ## Configuração de Uso do Zup Checkstyle
