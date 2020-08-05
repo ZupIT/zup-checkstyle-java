@@ -49,9 +49,12 @@ O checkstyle.xml faz uma analise de estilo básica mas que já visa qualidade de
 
 ## Configuração de Uso do Zup Checkstyle
 
-Este projeto fornece uma configuração padrão para o estilo de verificação de códigos da Zup.
+Copie este arquivo para dentro do seu projeto:
+https://github.com/ZupIT/zup-checkstyle-java/blob/master/src/main/resources/checkstyle.xml
 
-Para usá-lo, configure seu maven-checkstyle-plugin da seguinte maneira:
+- Este arquivo fornece uma configuração padrão para o estilo de verificação de códigos da Zup.
+
+Para usá-lo, configure seu POM.XML o maven-checkstyle-plugin da seguinte maneira:
 
 ````
  <artifactId>projeto-zup-plugin</artifactId>
