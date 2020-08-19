@@ -1,38 +1,24 @@
-
-# ZUP JAVA CHECKSTYLE
 ![Checkstyle](imgs/checkstyle.png)
-
+# ZUP JAVA CHECKSTYLE
 Este repositório tem como objetivo servir todos Devs Java da Zup a implementar boas práticas de convenção de código em projetos Java. O checkstyle é uma ferramenta que auxilia seu projeto a seguir uma convenção de código configurada por desenvolvedores. O objetivo é garantir a legibilidade do código
 
-## Nota do Projeto
+## Introdução
+Checkstyle é um analisador estático de código para checar se o código fonte está de acordo com as regras de codificação. Esta ferramenta de código fonte aberto ajuda nas boas práticas de programação na qual melhora-se a qualidade do código, re-usabilidade, clareza, entre outros fatores. O Checkstyle se preocupa com a apresentação do código, portanto não analisa se a lógica do seu código está correta.
 
-Este projeto visa ser um manual vivo, iterativo, e em constante construção por todos os Zuppers.
-Portanto, contribua! Deixe suas idéias e defenda o que deve ser levado em conta como padrão de códificação.
+É possível verificar, por exemplo:
 
-## Visão geral do Checkstyle
+Comentários Javadoc;
+Cabeçalhos obrigatórios;
+Convenções nos nomes dos atributos e métodos;
+Limite no número de parâmetros;
+A utilização dos pacotes importados nas classes;
+Os espaços entre caracteres;
+Boas práticas no desenvolvimento de classes;
+Código duplicado;
+E muitos mais.
+Portanto, pode-se verificar que o Checkstyle garante que o seu código atende a padrões e garante que há um bom nível de codificação.
 
-O Checkstyle é uma ferramenta de desenvolvimento que ajuda nós =programadores a escrever código Java(e outras linguagens) de forma aderente a um padrão de codificação.
-As seguintes linhas são citadas no site oficial do Checkstyle :
-
-- O Checkstyle é uma ferramenta de desenvolvimento para ajudar os programadores a escrever código Java que seguindo um padrão sólido e unificado de codificação.
-
-Ele automatiza o processo de verificação do código Java para poupar os humanos desta tarefa chata (mas importante). 
-Isso o torna ideal para projetos que desejam aplicar um padrão de codificação.
-Além disso, o Checkstyle pode ser usado para verificar muitos aspectos do seu código-fonte, como problemas no design de classes e métodos e no formato de layout. Para mais detalhes sobre as verificações, consulte a seção Verificações do site [https://maven.apache.org/plugins/maven-checkstyle-plugin/]
-
-O estilo de verificação pode ser personalizado com vários parâmetros. 
-Se você já possui um padrão de codificação existente, pode definir regras adequadas para o Checkstyle. Se você ainda não aplicou um estilo de codificação específico ao seu projeto, poderá usar os arquivos de configuração para verificar os padrões de codificação convencionais, como “Sun Java Code Conventions” e “Google Java Style”, que são utilizáveis ​​por padrão. 
-
-Ao fazer isso, você pode incorporar um padrão de codificação no fluxo de trabalho do seu projeto com facilidade.
-No Checkstyle, você usa um arquivo XML para descrever as regras. As verificações que seguem as regras descritas são fornecidas por comandos java e tarefas ant por padrão, mas são mais comumente usadas em projetos reais, incorporando no ambiente de desenvolvimento integrado (IDE) ou na ferramenta de construção.
-
-Para incorporar o Checkstyle nos IDEs, você pode usar plug-ins fornecidos para vários IDEs. Com essas opções, você pode 
-executar verificações em tempo real enquanto escreve o código-fonte.
-
-Se você deseja incorporar o Checkstyle nas ferramentas de construção, use maven e gradle. Ambos são ferramentas de construção usadas com frequência e fornecem uma tarefa para o Checkstyle por padrão, que pode ser usada para facilitar a integração. Ao incorporar nas ferramentas de construção, você pode verificar se o código-fonte de um projeto está sempre em conformidade com o padrão de codificação.
-
-No entanto, a integração em uma ferramenta de construção cria uma restrição muito forte: mesmo um pequeno problema impede que o código seja mesclado. Pode ser melhor usar serviços da Web dedicados a essa causa, como o Jenkins, para projetos existentes com o Checkstyle ainda não implementado ou quando um padrão de codificação não é imposto de maneira tão estrita.
-Como é possível verificar com um processo IDE e um IC (ferramenta de construção / Jenkins) usando um único arquivo XML, recomendamos que você incorpore os dois métodos de verificação em um projeto.
+![Checkstyle](imgs/todo-checkstyle.gif)
 
 
 ## Status do Projeto
