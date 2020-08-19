@@ -18,20 +18,16 @@ Checkstyle é um analisador estático de código para checar se o código fonte 
 - Boas práticas no desenvolvimento de classes;
 - Código duplicado;
 - E muitos mais detalhes e padrões.
+
 Portanto, pode-se verificar que o Checkstyle garante que o seu código atende a padrões e garante que há um bom nível de codificação.
 
 ![Checkstyle](imgs/todo-checkstyle.gif)
 
 
-## Status do Projeto
-
-Neste projeto foram criados inicialmente um arquivo de checkstyle:
+## Arquivo padrão do Zup Checkstyle
 - /src/main/resources/checkstyle.xml
 
-
-O checkstyle.xml faz uma analise de estilo básica mas que já visa qualidade de escrita.
- São verificados itens como quantidade de colunas/caracteres por linha (180),
- espaços entre valores e operadores, Quebra de linha após abertura de bloco {} e estrutura, definição de constantes, blocos vazios, estilo de declaração de listas e arrays, declaração de variaveis multiplas e ordem de modificadores, e faz uma tratativa melhorada sobre os magicnumbers deixando-os mais flexiveis.
+Este é o arquivo que você fará download para seu projeto. Nos próximos tópicos abordaremos como configurar o checkstyle em seu projeto Java.
  
  
 
@@ -44,87 +40,6 @@ https://github.com/ZupIT/zup-checkstyle-java/blob/master/src/main/resources/chec
 
 Para usá-lo, configure seu POM.XML o maven-checkstyle-plugin da seguinte maneira:
 
-````
- <artifactId>projeto-zup-plugin</artifactId>
- <version>0.1.0-SNAPSHOT</version>
- ...
- <properties>
-     <java.version>14</java.version>
-     <checkstyle-maven-plugin.version>3.1.1</checkstyle-maven-plugin.version>
- </properties>
-
-   <reporting>
-      <plugins>
-          <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-checkstyle-plugin</artifactId>
-              <version>3.1.1</version>
-              <configuration>
-                  <configLocation>${project.basedir}/checkstyle.xml</configLocation>
-                  <encoding>UTF-8</encoding>
-                  <consoleOutput>true</consoleOutput>
-                  <failsOnError>true</failsOnError>
-                  <linkXRef>true</linkXRef>
-                  <failOnViolation>true</failOnViolation>
-                  <enableFilesSummary>true</enableFilesSummary>
-              </configuration>
-          </plugin>
-      </plugins>
-  </reporting>
-     
- <build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-checkstyle-plugin</artifactId>
-            <version>${checkstyle-maven-plugin.version}</version>
-            <executions>
-                <execution>
-                    <id>validate</id>
-                    <phase>validate</phase>
-                    <configuration>
-                        <configLocation>checkstyle.xml</configLocation>
-                        <encoding>UTF-8</encoding>
-                        <consoleOutput>true</consoleOutput>
-                        <failsOnError>false</failsOnError>
-                        <failOnViolation>true</failOnViolation>
-                        <violationSeverity>warning</violationSeverity>
-                    </configuration>
-                    <goals>
-                        <goal>check</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-</build>
-````
-
-Consulte os [documentos do maven-checkstyle-plugin] (https://maven.apache.org/plugins/maven-checkstyle-plugin/check-mojo.html) 
-para obter mais informações sobre o significado dos parâmetros de configuração.
-
-Internamente, temos a configuração acima na seção `<pluginManagement />` de um 
-pom principal da Zup, o que significa que os projetos precisam apenas especificar o seguinte em seus
-Seção `<build> <plugins>`:
-
-````
-   <plugin>
-      <artifactId> maven-checkstyle-plugin </artifactId>
-   </plugin>
-````
-
-## Configuração
-
-### Supressões
-
-A configuração do plugin checkstyle que você obtém de `zup_checks.xml` diz para 
-opcionalmente, procure um arquivo chamado `suppressions.xml`, conforme
-[Documentos do SuppressionFilter] (http://checkstyle.sourceforge.net/config_filters.html#SuppressionFilter). 
-Isso significa que você pode configurar supressões fornecendo esse arquivo no seu
-caminho de classe do projeto ou no diretório atual em que você o constrói - note 
-para projetos com vários módulos, provavelmente é uma boa ideia usar algo
-como [esta solução] (http://stackoverflow.com/a/19690484/1659929) para compartilhar
-a configuração entre cada submódulo.
 
 
 # Código de conduta
