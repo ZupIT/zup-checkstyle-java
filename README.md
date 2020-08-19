@@ -166,10 +166,50 @@ Na sequencia do *<configLocation>* podemos ver outras tags importantes que infor
 - Define qual o nível de severidade para *Violações* de estilo, e este nível define diretamente se a configuração da tag `<failOnViolation>true</failOnViolation>` impedirá ou não o build.
 <a href="https://maven.apache.org/plugins/maven-checkstyle-plugin/check-mojo.html#violationSeverity"> Outros Níveis </a>
 
+### Relátorios do Checkstyle
+
+Na mesma linha do plugin maven, é possível configurar como a execução do plugin deve gerar relatórios no console ou na sua IDE.
+Para isso, basta incluir na raiz do seu *pom.xml* a seguinte configuração, note que ela contém a maioria das tags também definidas no plugin do checkstyle maven para o build da aplicação.
+
+```
+<reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.1.1</version>
+                <configuration>
+                    <configLocation>${project.basedir}/checkstyle.xml</configLocation>
+                    <encoding>UTF-8</encoding>
+                    <consoleOutput>true</consoleOutput>
+                    <failsOnError>true</failsOnError>
+                    <linkXRef>true</linkXRef>
+                    <failOnViolation>true</failOnViolation>
+                    <enableFilesSummary>true</enableFilesSummary>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+ ````
+Com isso, voce está pronto para garantir que seu código sempre estará de acordo com a convenção de código adotada por nós Zuppers.
+
 
 Para mais detalhes sobre o plugin maven, confira <a href="https://maven.apache.org/plugins/maven-checkstyle-plugin">aqui</a>
 
 ## Checando seu projeto com maven
+
+Para rodar a checagem do seu projeto, basta usar o comando via maven a seguir:
+
+```
+# mvn checkstyle:check
+```
+
+- Feito isto... se projeto estiver 100% o relatório não trará nenhum resutado além da informação de sucesso.
+
+- Em caso de violações do checkstyle por seu código, será exibido um relatório como este:
+
+![Report](imgs/checkstyle-report-1.png)
+
 
 
 
