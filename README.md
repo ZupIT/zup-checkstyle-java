@@ -1,6 +1,7 @@
 ![Checkstyle](imgs/checkstyle.png)
  
  
+ 
  ### Tópicos - ZUP Checkstyle
 
 :small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
@@ -35,6 +36,7 @@ O objetivo é garantir a legibilidade e fácil leitura e manutenção do código
  
 </p>
 
+
 ## Introdução
 Checkstyle é um analisador estático de código para checar se o código fonte está de acordo com as regras de codificação. Esta ferramenta de código fonte aberto ajuda nas boas práticas de programação na qual melhora-se a qualidade do código, re-usabilidade, clareza, entre outros fatores. O Checkstyle se preocupa com a apresentação do código, portanto não analisa se a lógica do seu código está correta.
 
@@ -58,6 +60,7 @@ Portanto, pode-se verificar que o Checkstyle garante que o seu código atende a 
 ![Todo](imgs/todo-checkstyle.gif)
 
 
+
 ## Arquivo de Checkstyle
 
 <a href="https://github.com/ZupIT/zup-checkstyle-java/blob/master/src/main/resources/checkstyle.xml">
@@ -66,6 +69,8 @@ Portanto, pode-se verificar que o Checkstyle garante que o seu código atende a 
 
 
 - Este é o arquivo que você fará download para seu projeto. Nos próximos tópicos abordaremos como configurar o checkstyle em seu projeto Java.
+ 
+ 
  
 ## Pré-requisitos
 
@@ -81,6 +86,8 @@ Copie este arquivo para dentro do seu projeto:
 
 https://github.com/ZupIT/zup-checkstyle-java/blob/master/src/main/resources/checkstyle.xml
 
+- Este arquivo fornece a configuração padrão de estilo de códigos da Zup.
+
 
 Segue exemplo de como ele pode ficar dentro do seu projeto.
  - lembrando que voce pode criar um diretório exclusivo para armazenar o arquivo de checkstyle, contanto que esteja dentro do seu projeto.
@@ -89,8 +96,6 @@ Segue exemplo de como ele pode ficar dentro do seu projeto.
  ![Checkstyle Into your Project](imgs/checkstyle-into-project-1.png)
 
 
-
-- Este arquivo fornece uma configuração padrão para o estilo de verificação de códigos da Zup.
 
 ### Configurando pom.xml (Maven):
 
@@ -102,19 +107,24 @@ Busque em seu arquivo *pom.xml* o trecho
 ...
 </properties>
 ```
-É possível que seu projeto não contenha o *<properties>*, neste caso voce pode adicionar, ele deve ficar na raiz do *pom.xml*, no mesmo nível do 
-seu *<artifactId>* que define o id do seu artefato (projeto java).
+É possível que seu projeto não contenha esta tag `<properties>`, neste caso voce pode adicionar, ele deve ficar na raiz do *pom.xml*, no mesmo nível do 
+seu `<artifactId>` que define o id do seu artefato (projeto java).
  
-Dentro de *<properties>*, adicione a chave para indicar a versão do plugin checkstyle para maven.
+Dentro de `<properties>`, adicione a chave para indicar a versão do plugin checkstyle para maven.
  
-*<checkstyle-maven-plugin.version>3.1.1</checkstyle-maven-plugin.version>*
-Em nosso caso, será a versão 3.1.1;
+`<checkstyle-maven-plugin.version>3.1.1</checkstyle-maven-plugin.version>`
 
+Em nosso caso, será a versão 3.1.1.
+
+Deverá ficar assim:
 ```
 <properties>
     <checkstyle-maven-plugin.version>3.1.1</checkstyle-maven-plugin.version>
 </properties>
 ```
+
+Caso seu projeto já contenha outras configurações no `<properties>`, esta deverá ser mais uma delas.
+
 
 Na sequência, procure pela área de *<build><plugins>* do seu *pom.xml* - Caso não exista, voce pode criar esta na raiz do seu *pom.xml* e adicionar conforme exemplo abaixo (Já configurando o plugin do checkstyle):
 
@@ -146,6 +156,7 @@ Na sequência, procure pela área de *<build><plugins>* do seu *pom.xml* - Caso 
         </plugins>
     </build>
 ```
+
 #### Explicação do plugin checkstyle para maven:
 
 Para quem é chegado no Mave, voce pode notar que o plugin define um novo Goal (mojo) chamado de *<goal>check</goal>*, este goal vai ser executado durante a fase de validação do build do projeto, definido na tag *<phase>validate</phase>*, ou seja durante a validação, ele fará a checagem do código usando o arquiovo de checkstyle definido pela chave `<configLocation>checkstyle.xml</configLocation>`.
@@ -165,6 +176,7 @@ Na sequencia do *<configLocation>* podemos ver outras tags importantes que infor
 `<violationSeverity>warning</violationSeverity>`
 - Define qual o nível de severidade para *Violações* de estilo, e este nível define diretamente se a configuração da tag `<failOnViolation>true</failOnViolation>` impedirá ou não o build.
 <a href="https://maven.apache.org/plugins/maven-checkstyle-plugin/check-mojo.html#violationSeverity"> Outros Níveis </a>
+
 
 ### Relátorios do Checkstyle
 
@@ -196,6 +208,7 @@ Com isso, voce está pronto para garantir que seu código sempre estará de acor
 
 Para mais detalhes sobre o plugin maven, confira <a href="https://maven.apache.org/plugins/maven-checkstyle-plugin">aqui</a>
 
+
 ## Checando seu projeto com maven
 
 Para rodar a checagem do seu projeto, basta usar este comando maven no shell/console:
@@ -213,10 +226,12 @@ Para rodar a checagem do seu projeto, basta usar este comando maven no shell/con
 Perceba que no relatório são apontados quais violações ocorrem, em que arquivos de código e em quais linhas elas ocorrem - facilitando muito a adaptação do seu código à convenção de estilo da Zup.
 
 
+
 ## Artigos relevantes
 
  - [Java com Checkstyle](https://www.devmedia.com.br/java-com-checkstyle/26043)
  - [How to Centralize your Checkstyle Configuration with Maven](https://codeburst.io/how-to-centralize-your-checkstyle-configuration-with-maven-7575eacd7295)
+
 
 
 ### Mais Checkstyles:
