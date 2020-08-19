@@ -198,7 +198,7 @@ Para mais detalhes sobre o plugin maven, confira <a href="https://maven.apache.o
 
 ## Checando seu projeto com maven
 
-Para rodar a checagem do seu projeto, basta usar o comando via maven a seguir:
+Para rodar a checagem do seu projeto, basta usar este comando maven no shell/console:
 
 ```
 # mvn checkstyle:check
@@ -210,7 +210,7 @@ Para rodar a checagem do seu projeto, basta usar o comando via maven a seguir:
 
 ![Report](imgs/checkstyle-report-1.png)
 
-
+Perceba que no relatório são apontados quais violações ocorrem, em que arquivos de código e em quais linhas elas ocorrem - facilitando muito a adaptação do seu código à convenção de estilo da Zup.
 
 
 ## Artigos relevantes
