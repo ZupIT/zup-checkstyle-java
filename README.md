@@ -1,10 +1,17 @@
+<h1 align="center">
 ![Checkstyle](imgs/checkstyle.png)
+<h1 align="center">
+ 
+ 
 # ZUP CHECKSTYLE JAVA
 Este repositório tem como objetivo servir todos Devs da Zup a implementaremn boas práticas de convenção de código em projetos Java. 
 O checkstyle é uma ferramenta que auxilia seu projeto a seguir uma convenção de código configurada por desenvolvedores. 
 O objetivo é garantir a legibilidade e fácil leitura e manutenção do código.
 
+<h1 align="center">
 ![Badge](https://img.shields.io/static/v1?label=java&message=checked&color=green&style=for-the-badge&logo=java)
+</h1>
+
 
 ## Introdução
 Checkstyle é um analisador estático de código para checar se o código fonte está de acordo com as regras de codificação. Esta ferramenta de código fonte aberto ajuda nas boas práticas de programação na qual melhora-se a qualidade do código, re-usabilidade, clareza, entre outros fatores. O Checkstyle se preocupa com a apresentação do código, portanto não analisa se a lógica do seu código está correta.
