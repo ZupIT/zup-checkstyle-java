@@ -31,11 +31,13 @@ Portanto, pode-se verificar que o Checkstyle garante que o seu código atende a 
 
 
 ## Arquivo padrão do Zup Checkstyle
+
 <a href="https://github.com/ZupIT/zup-checkstyle-java/blob/master/src/main/resources/checkstyle.xml">
 /src/main/resources/checkstyle.xml
 </a>
 
-Este é o arquivo que você fará download para seu projeto. Nos próximos tópicos abordaremos como configurar o checkstyle em seu projeto Java.
+
+- Este é o arquivo que você fará download para seu projeto. Nos próximos tópicos abordaremos como configurar o checkstyle em seu projeto Java.
  
  
 
