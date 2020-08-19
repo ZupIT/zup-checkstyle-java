@@ -1,7 +1,7 @@
 ![Checkstyle](imgs/checkstyle.png)
  
  
-# ZUP CHECKSTYLE JAVA
+# ZUP Checkstyle
 Este repositório tem como objetivo servir todos Devs da Zup a implementaremn boas práticas de convenção de código em projetos Java. 
 O checkstyle é uma ferramenta que auxilia seu projeto a seguir uma convenção de código configurada por desenvolvedores. 
 O objetivo é garantir a legibilidade e fácil leitura e manutenção do código.
@@ -52,7 +52,7 @@ Para usá-lo, configure seu POM.XML o maven-checkstyle-plugin da seguinte maneir
 
 
 
-# Código de conduta
+## Código de conduta
 Este projeto segue o [Código de Conduta Aberto] [código de conduta]. Ao participar, espera-se que você respeite esse código.
 
 [código de conduta]: https://github.com/klyff/zup-code-of-conduct/blob/master/code-of-conduct.md
