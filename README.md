@@ -1,6 +1,4 @@
-<h1 align="center">
 ![Checkstyle](imgs/checkstyle.png)
-<h1 align="center">
  
  
 # ZUP CHECKSTYLE JAVA
@@ -8,9 +6,8 @@ Este repositório tem como objetivo servir todos Devs da Zup a implementaremn bo
 O checkstyle é uma ferramenta que auxilia seu projeto a seguir uma convenção de código configurada por desenvolvedores. 
 O objetivo é garantir a legibilidade e fácil leitura e manutenção do código.
 
-<h1 align="center">
-![Badge](https://img.shields.io/static/v1?label=java&message=checked&color=green&style=for-the-badge&logo=java)
-</h1>
+![Badge](https://img.shields.io/static/v1?label=java&message=checked&color=blue&style=flat-square&logo=java)
+![Badge](https://img.shields.io/static/v1?label=codecoverage&message=100%&color=green&style=flat-square&logo=shell)
 
 
 ## Introdução
