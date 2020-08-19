@@ -30,7 +30,7 @@ Portanto, pode-se verificar que o Checkstyle garante que o seu código atende a 
 ![Todo](imgs/todo-checkstyle.gif)
 
 
-## Arquivo padrão do Zup Checkstyle
+## Arquivo padrão do Zup Checkstyle :pushpin:
 
 <a href="https://github.com/ZupIT/zup-checkstyle-java/blob/master/src/main/resources/checkstyle.xml">
 /src/main/resources/checkstyle.xml
@@ -41,7 +41,7 @@ Portanto, pode-se verificar que o Checkstyle garante que o seu código atende a 
  
  
 
-## Configuração de Uso do Zup Checkstyle
+## Configuração de Uso do Zup Checkstyle :checkered_flag:
 
 Copie este arquivo para dentro do seu projeto:
 https://github.com/ZupIT/zup-checkstyle-java/blob/master/src/main/resources/checkstyle.xml
