@@ -26,9 +26,13 @@ O checkstyle é uma ferramenta que auxilia seu projeto a seguir uma convenção 
 O objetivo é garantir a legibilidade e fácil leitura e manutenção do código.
 
 <p align="center">
+
  ![Badge](https://img.shields.io/static/v1?label=java&message=checked&color=blue&style=flat-square&logo=java)
+ 
  ![Badge](https://img.shields.io/static/v1?label=codecoverage&message=100%&color=green&style=flat-square&logo=shell)
+ 
  ![Badge](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=flat-square)
+ 
 </p>
 
 ## Introdução
@@ -37,16 +41,19 @@ Checkstyle é um analisador estático de código para checar se o código fonte 
 É possível verificar, por exemplo:
 
 - Comentários Javadoc;
+- Códigos repetitivos;
+- Número de Colunas (tamanho da linha);
 - Cabeçalhos obrigatórios;
 - Convenções nos nomes dos atributos e métodos;
 - Limite no número de parâmetros;
 - A utilização dos pacotes importados nas classes;
-- Os espaços entre caracteres;
-- Boas práticas no desenvolvimento de classes;
+- Os espaços entre caracteres e entre operadores;
+- Números mágicos;
+- Boas práticas no desenvolvimento de classes e métodos;
 - Código duplicado;
 - E muitos mais detalhes e padrões.
 
-Portanto, pode-se verificar que o Checkstyle garante que o seu código atende a padrões e garante que há um bom nível de codificação.
+Portanto, pode-se verificar que o Checkstyle garante que o seu código atende a padrões e que há um bom nível de codificação.
 
 ![Todo](imgs/todo-checkstyle.gif)
 
