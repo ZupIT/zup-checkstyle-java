@@ -235,4 +235,7 @@ Perceba que no relatório são apontados quais violações ocorrem, em que arqui
 
 
 ### Mais Checkstyles:
+- https://github.com/spotify/spotify-checkstyle-config
+- https://github.com/sevntu-checkstyle/sevntu.checkstyle
 - https://github.com/singhalkul/java-quality-checks/blob/master/config/checkstyle/checkstyle.xml
+- https://checkstyle.sourceforge.io/google_style.html
