@@ -43,7 +43,7 @@ Checkstyle é um analisador estático de código para checar se o código fonte 
 É possível verificar, por exemplo:
 
 - Comentários Javadoc;
-- Códigos repetitivos;
+- Códigos duplicados;
 - Número de Colunas (tamanho da linha);
 - Cabeçalhos obrigatórios;
 - Convenções nos nomes dos atributos e métodos;
@@ -52,7 +52,6 @@ Checkstyle é um analisador estático de código para checar se o código fonte 
 - Os espaços entre caracteres e entre operadores;
 - Números mágicos;
 - Boas práticas no desenvolvimento de classes e métodos;
-- Código duplicado;
 - E muitos mais detalhes e padrões.
 
 Portanto, pode-se verificar que o Checkstyle garante que o seu código atende a padrões e que há um bom nível de codificação.
