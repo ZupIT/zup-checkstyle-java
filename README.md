@@ -16,7 +16,7 @@
 
 :small_blue_diamond: [Checando seu projeto com maven](#Checando-seu-projeto-com-maven)
 
-:small_blue_diamond: [Configurando o plugin Checkstyle no IntelliJ]()
+:small_blue_diamond: [Configurando o plugin Checkstyle no IntelliJ](#Instalando-o-plugin-Checkstyles-no-IntelliJ-IDEA)
 
 :small_blue_diamond: [Artigos relevantes](#Artigos-relevantes)
 
@@ -239,7 +239,9 @@ checkstyle.xml e clique em next.
 
 ![Report](imgs/checkstyle-ide-intellij-import-config.png)
 
-Com o arquivo importado, **não se esqueça de deixar selecionado como Active**.
+Com o arquivo importado, **não se esqueça de deixar selecionado como Active**:
+
+![Report](imgs/checkstyle-ide-intellij-config-file.png)
 
 Agora vamos adicionar o mesmo arquivo de checkstyle nas configurações do próprio IntelliJ, assim 
 quando utilizarmos os atalhos de formatação padrão ele automaticamente buscará Checkstyle Zup.
