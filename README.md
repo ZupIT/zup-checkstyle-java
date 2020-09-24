@@ -16,7 +16,7 @@
 
 :small_blue_diamond: [Checando seu projeto com maven](#Checando-seu-projeto-com-maven)
 
-:small_blue_diamond: [Configurando o plugin Checkstyle no IntelliJ](#Instalando-o-plugin-Checkstyles-no-IntelliJ-IDEA)
+:small_blue_diamond: [Instalando e configurando o plugin CheckStyle-IDEA no IntelliJ](#Instalando-o-plugin-CheckStyle-IDEA-no-IntelliJ)
 
 :small_blue_diamond: [Artigos relevantes](#Artigos-relevantes)
 
@@ -227,7 +227,7 @@ Para rodar a checagem do seu projeto, basta usar este comando maven no shell/con
 Perceba que no relatório são apontados quais violações ocorrem, em que arquivos de código e em quais linhas elas ocorrem - facilitando muito a adaptação do seu código à convenção de estilo da Zup.
 
 
-## Instalando o plugin Checkstyles no IntelliJ IDEA
+## Instalando o plugin CheckStyle-IDEA no IntelliJ
 
 Podemos utilizar o plugin <a href="https://plugins.jetbrains.com/plugin/1065-checkstyle-idea">CheckStyle-IDEA</a> para auxiliar a formatação de código na IDE. Para configurar é muito simples, primeiro instale o plugin através do link acima ou no próprio IntelliJ
 em **File -> Settings -> Plugins:**
