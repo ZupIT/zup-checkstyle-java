@@ -234,6 +234,8 @@ em **File -> Settings -> Plugins:**
 
 ![Report](imgs/checkstyle-ide-plugin-intellij.png)
 
+### Configurando o plugin CheckStyle-IDEA
+
 Após a instalação, precisamos importar as configurações definidas no arquivo checkstyle.xml dentro do plugin CheckStyle-IDEA. Navegue até **File -> Settings -> Tools -> Checkstyle** e em **Configuration File** clique em **Add** (sinal de **+** à direita), indique o caminho do seu
 checkstyle.xml e clique em next.
 
