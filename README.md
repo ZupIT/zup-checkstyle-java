@@ -252,9 +252,11 @@ abaixo:
 
 ![Report](imgs/checkstyle-ide-intellij-import-config-code-style.png)
 
-Finalizadas essas configurações, no rodapé do IntelliJ aparecerá a opção de CheckStyle, execute a 
-verificação e o plugin indicará os problemas encontrados, aqueles relacionados a formatação de código
-podem ser corrigidos com o bom e velho **CTRL + ALT + L** :)
+Finalizadas essas configurações, no rodapé do IntelliJ aparecerá a opção de CheckStyle e ao clicar 
+a tela abaixo será apresentada. Neste ponto, em **Rules** selecione a que você importou nos passos 
+anteriores e execute a verificação. O plugin indicará os problemas encontrados e aqueles relacionados a formatação de código poderão ser facilmente corrigidos com o bom e velho **CTRL + ALT + L** :)
+
+![Report](imgs/checkstyle-ide-plugin-intellij-setting-rules.png)
 
 
 ## Artigos relevantes
