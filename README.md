@@ -16,6 +16,8 @@
 
 :small_blue_diamond: [Checando seu projeto com maven](#Checando-seu-projeto-com-maven)
 
+:small_blue_diamond: [Instalando e configurando o plugin CheckStyle-IDEA no IntelliJ](#Instalando-o-plugin-CheckStyle-IDEA-no-IntelliJ)
+
 :small_blue_diamond: [Artigos relevantes](#Artigos-relevantes)
 
 :small_blue_diamond: [Outros Checkstyles](#outros-checkstyles)
@@ -158,13 +160,13 @@ Na sequência, procure pela área de *<build><plugins>* do seu *pom.xml* - Caso 
 
 #### Explicação do plugin checkstyle para maven:
 
-Para quem é chegado no Mave, voce pode notar que o plugin define um novo Goal (mojo) chamado de *<goal>check</goal>*, este goal vai ser executado durante a fase de validação do build do projeto, definido na tag *<phase>validate</phase>*, ou seja durante a validação, ele fará a checagem do código usando o arquiovo de checkstyle definido pela chave `<configLocation>checkstyle.xml</configLocation>`.
+Para quem é chegado no Maven, voce pode notar que o plugin define um novo Goal (mojo) chamado de *<goal>check</goal>*, este goal vai ser executado durante a fase de validação do build do projeto, definido na tag *<phase>validate</phase>*, ou seja durante a validação, ele fará a checagem do código usando o arquiovo de checkstyle definido pela chave `<configLocation>checkstyle.xml</configLocation>`.
 - Note que a chave *<configLocation>* aponta para o arquivo checkstyle.xml, que em nosso exemplo está na raiz do projeto, se estivesse em um diretório mais interno, devemos usar um caminho relativo (sem barras no inicio) para indicar onde o arquivo *checkstyle.xml* se encontra em nosso projeto.
  
 Na sequencia do *<configLocation>* podemos ver outras tags importantes que informam o comportamento do plugin checkstyle ao analisar nosso código:
 
 `<consoleOutput>true</consoleOutput>`
-- Informa que ele deve imprimir no console o resultado da chacagem.
+- Informa que ele deve imprimir no console o resultado da checagem.
 
 `<failsOnError>false</failsOnError>`
 - Informa que se caso de *Erros* durante a checagem de estilo, o plugin deve impedir o build do projeto até que o código seja ajustado.
@@ -224,6 +226,37 @@ Para rodar a checagem do seu projeto, basta usar este comando maven no shell/con
 
 Perceba que no relatório são apontados quais violações ocorrem, em que arquivos de código e em quais linhas elas ocorrem - facilitando muito a adaptação do seu código à convenção de estilo da Zup.
 
+
+## Instalando o plugin CheckStyle-IDEA no IntelliJ
+
+Podemos utilizar o plugin <a href="https://plugins.jetbrains.com/plugin/1065-checkstyle-idea">CheckStyle-IDEA</a> para auxiliar a formatação de código na IDE. Para configurar é muito simples, primeiro instale o plugin através do link acima ou no próprio IntelliJ
+em **File -> Settings -> Plugins:**
+
+![Report](imgs/checkstyle-ide-plugin-intellij.png)
+
+### Configurando o plugin CheckStyle-IDEA
+
+Após a instalação, precisamos importar as configurações definidas no arquivo checkstyle.xml dentro do plugin CheckStyle-IDEA. Navegue até **File -> Settings -> Tools -> Checkstyle** e em **Configuration File** clique em **Add** (sinal de **+** à direita), indique o caminho do seu
+checkstyle.xml e clique em next.
+
+![Report](imgs/checkstyle-ide-intellij-import-config.png)
+
+Com o arquivo importado, **não se esqueça de deixar selecionado como Active**:
+
+![Report](imgs/checkstyle-ide-intellij-config-file.png)
+
+Agora vamos adicionar o mesmo arquivo de checkstyle nas configurações do próprio IntelliJ, assim 
+quando utilizarmos os atalhos de formatação padrão ele automaticamente buscará Checkstyle Zup.
+Dentro de settings, vá até **Editor -> Code Style -> Java** e importe o arquivo conforme imagem 
+abaixo:
+
+![Report](imgs/checkstyle-ide-intellij-import-config-code-style.png)
+
+Finalizadas essas configurações, no rodapé do IntelliJ aparecerá a opção de CheckStyle e ao clicar 
+a tela abaixo será apresentada. Neste ponto, em **Rules** selecione a que você importou nos passos 
+anteriores e execute a verificação. O plugin indicará os problemas encontrados e aqueles relacionados a formatação de código poderão ser facilmente corrigidos com o bom e velho **CTRL + ALT + L** :)
+
+![Report](imgs/checkstyle-ide-plugin-intellij-setting-rules.png)
 
 
 ## Artigos relevantes
