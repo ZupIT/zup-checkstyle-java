@@ -36,7 +36,7 @@ O objetivo é garantir a legibilidade e fácil leitura e manutenção do código
  
  ![Badge](https://img.shields.io/static/v1?label=codecoverage&message=100%&color=green&style=flat-square&logo=shell)
  
- ![Badge](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=flat-square)
+ ![Badge](http://img.shields.io/static/v1?label=STATUS&message=PRONTO%20PARA%20USO&color=RED&style=flat-square)
  
 </p>
 
