@@ -268,6 +268,8 @@ abrir pesquise por **checkstyle** e instale o Checkstyle Plug-in abaixo:
 
 ![Report](imgs/checkstyle-ide-plugin-eclipse.png)
 
+### Configurando o plugin CheckStyle
+
 Feita a instalação vá até **Window -> Preferences** e pesquise por **Checkstyle**. Na janela que 
 aparecer clique em **New**:
 
