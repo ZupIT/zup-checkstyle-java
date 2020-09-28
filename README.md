@@ -18,6 +18,8 @@
 
 :small_blue_diamond: [Instalando e configurando o plugin CheckStyle-IDEA no IntelliJ](#Instalando-o-plugin-CheckStyle-IDEA-no-IntelliJ)
 
+:small_blue_diamond: [Instalando e configurando o plugin CheckStyle no Eclipse](#Instalando-o-plugin-Checkstyle-no-Eclipse)
+
 :small_blue_diamond: [Artigos relevantes](#Artigos-relevantes)
 
 :small_blue_diamond: [Outros Checkstyles](#outros-checkstyles)
@@ -34,7 +36,7 @@ O objetivo é garantir a legibilidade e fácil leitura e manutenção do código
  
  ![Badge](https://img.shields.io/static/v1?label=codecoverage&message=100%&color=green&style=flat-square&logo=shell)
  
- ![Badge](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=flat-square)
+ ![Badge](http://img.shields.io/static/v1?label=STATUS&message=PRONTO%20PARA%20USO&color=RED&style=flat-square)
  
 </p>
 
@@ -91,7 +93,7 @@ https://github.com/ZupIT/zup-checkstyle-java/blob/master/src/main/resources/chec
 
 
 Segue exemplo de como ele pode ficar dentro do seu projeto.
- - lembrando que voce pode criar um diretório exclusivo para armazenar o arquivo de checkstyle, contanto que esteja dentro do seu projeto.
+ - lembrando que você pode criar um diretório exclusivo para armazenar o arquivo de checkstyle, contanto que esteja dentro do seu projeto.
  a localização exata dele será utilizada mais abaixo.
  
  ![Checkstyle Into your Project](imgs/checkstyle-into-project-1.png)
@@ -108,7 +110,7 @@ Busque em seu arquivo *pom.xml* o trecho
 ...
 </properties>
 ```
-É possível que seu projeto não contenha esta tag `<properties>`, neste caso voce pode adicionar, ele deve ficar na raiz do *pom.xml*, no mesmo nível do 
+É possível que seu projeto não contenha esta tag `<properties>`, neste caso você pode adicionar, ele deve ficar na raiz do *pom.xml*, no mesmo nível do 
 seu `<artifactId>` que define o id do seu artefato (projeto java).
  
 Dentro de `<properties>`, adicione a chave para indicar a versão do plugin checkstyle para maven.
@@ -127,7 +129,7 @@ Deverá ficar assim:
 Caso seu projeto já contenha outras configurações no `<properties>`, esta deverá ser mais uma delas.
 
 
-Na sequência, procure pela área de *<build><plugins>* do seu *pom.xml* - Caso não exista, voce pode criar esta na raiz do seu *pom.xml* e adicionar conforme exemplo abaixo (Já configurando o plugin do checkstyle):
+Na sequência, procure pela área de *<build><plugins>* do seu *pom.xml* - Caso não exista, você pode criar esta na raiz do seu *pom.xml* e adicionar conforme exemplo abaixo (Já configurando o plugin do checkstyle):
 
 ```
 <build>
@@ -160,7 +162,7 @@ Na sequência, procure pela área de *<build><plugins>* do seu *pom.xml* - Caso 
 
 #### Explicação do plugin checkstyle para maven:
 
-Para quem é chegado no Maven, voce pode notar que o plugin define um novo Goal (mojo) chamado de *<goal>check</goal>*, este goal vai ser executado durante a fase de validação do build do projeto, definido na tag *<phase>validate</phase>*, ou seja durante a validação, ele fará a checagem do código usando o arquiovo de checkstyle definido pela chave `<configLocation>checkstyle.xml</configLocation>`.
+Para quem é chegado no Maven, você pode notar que o plugin define um novo Goal (mojo) chamado de *<goal>check</goal>*, este goal vai ser executado durante a fase de validação do build do projeto, definido na tag *<phase>validate</phase>*, ou seja durante a validação, ele fará a checagem do código usando o arquiovo de checkstyle definido pela chave `<configLocation>checkstyle.xml</configLocation>`.
 - Note que a chave *<configLocation>* aponta para o arquivo checkstyle.xml, que em nosso exemplo está na raiz do projeto, se estivesse em um diretório mais interno, devemos usar um caminho relativo (sem barras no inicio) para indicar onde o arquivo *checkstyle.xml* se encontra em nosso projeto.
  
 Na sequencia do *<configLocation>* podemos ver outras tags importantes que informam o comportamento do plugin checkstyle ao analisar nosso código:
@@ -204,7 +206,7 @@ Para isso, basta incluir na raiz do seu *pom.xml* a seguinte configuração, not
         </plugins>
     </reporting>
  ````
-Com isso, voce está pronto para garantir que seu código sempre estará de acordo com a convenção de código adotada por nós Zuppers.
+Com isso, você está pronto para garantir que seu código sempre estará de acordo com a convenção de código adotada por nós Zuppers.
 
 
 Para mais detalhes sobre o plugin maven, confira <a href="https://maven.apache.org/plugins/maven-checkstyle-plugin">aqui</a>
@@ -257,6 +259,56 @@ a tela abaixo será apresentada. Neste ponto, em **Rules** selecione a que você
 anteriores e execute a verificação. O plugin indicará os problemas encontrados e aqueles relacionados a formatação de código poderão ser facilmente corrigidos com o bom e velho **CTRL + ALT + L** :)
 
 ![Report](imgs/checkstyle-ide-plugin-intellij-setting-rules.png)
+
+
+## Instalando o plugin Checkstyle no Eclipse
+
+Para instalar o plugin Checkstyle no Eclipse navegue até **Help -> Eclipse Marketplace**, na janela que 
+abrir pesquise por **checkstyle** e instale o Checkstyle Plug-in abaixo:
+
+![Report](imgs/checkstyle-ide-plugin-eclipse.png)
+
+### Configurando o plugin CheckStyle
+
+Feita a instalação vá até **Window -> Preferences** e pesquise por **Checkstyle**. Na janela que 
+aparecer clique em **New**:
+
+![Report](imgs/checkstyle-ide-plugin-eclipse-config.png)
+
+Na janela de adição de novo Check Configuration na caixa suspensa **Type** selecione **External
+Configuration File** e importe o XML do checkstyle. Dê um nome de sua preferência, clique em 
+**Ok** e marque-o como default:
+
+![Report](imgs/checkstyle-ide-eclipse-setcheck.png)
+
+Novamente em **Window -> Preferences** pesquise por **Formatter** e acesse o resultado dentro
+do tópico de Java. Nele crie um novo profile, pode ser baseado em qualquer uma das configurações
+e clique em **Ok**.
+
+![Report](imgs/checkstyle-ide-eclipse-formatter.png)
+
+Feito isso clique em **Edit** para editar o profile que você acabou de criar, na caixa suspensa
+**Tab Policy** deixe selecionada a opção **Spaces only**:
+
+![Report](imgs/checkstyle-ide-eclipse-tab-policy.png)
+
+Feito isso, reinicie o Eclipse. Após reiniciá-lo clique com o botão direito do mouse em um arquivo
+Java e vá até a opção **Checkstyle -> Check Code with Checkstyle** e a verificação será feita e os 
+pontos a serem corrigidos serão levantados:
+
+![Report](imgs/checkstyle-ide-eclipse-check-code.png)
+
+A partir deste ponto basta selecionar todo o código com **CTRL + A** e depois clicar com o botão
+direito do mouse e selecionar a opção **Apply Checkstyle fixes**. O próprio plugin fará algumas 
+correções conforme configurado. Para correções adicionais de formatação selecione novamente o código clique com o botão direito do mouse indo até **Source -> Format**. Aplicados os dois passos
+de formatação acima execute novamente a verificação do arquivo com o **Checkstyle -> Check Code with Checkstyle** e observe que alguns tipos de correções relacionadas a formatação foram
+realizadas:
+
+![Report](imgs/checkstyle-ide-eclipse-after-check-code.png)
+
+Pronto! Agora o código está formatado conforme as regras do checkstyle. Lembre-se que algumas
+das modificações sugeridas pelo ``` # mvn checkstyle:check ``` devem ser feitas manualmente pois
+os plugins ainda não conseguem atendê-las.
 
 
 ## Artigos relevantes
