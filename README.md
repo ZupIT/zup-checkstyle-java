@@ -259,6 +259,54 @@ anteriores e execute a verificação. O plugin indicará os problemas encontrado
 ![Report](imgs/checkstyle-ide-plugin-intellij-setting-rules.png)
 
 
+## Instalando o plugin Checkstyle no Eclipse
+
+Para instalar o plugin Checkstyle no Eclipse navegue até **Help -> Eclipse Marketplace**, na janela que 
+abrir pesquise por **checkstyle** e instale o Checkstyle Plug-in abaixo:
+
+![Report](imgs/checkstyle-ide-plugin-eclipse.png)
+
+Feita a instalação vá até **Window -> Preferences** e pesquise por **Checkstyle**. Na janela que 
+aparecer clique em **New**:
+
+![Report](imgs/checkstyle-ide-plugin-eclipse-config.png)
+
+Na janela de adição de novo Check Configuration na caixa suspensa **Type** selecione **External
+Configuration File** e importe o XML do checkstyle. Dê um nome de sua preferência, clique em 
+**Ok** e marque-o como default:
+
+![Report](imgs/checkstyle-ide-eclipse-setcheck.png)
+
+Novamente em **Window -> Preferences** pesquise por **Formatter** e acesse o resultado dentro
+do tópico de Java. Nele crie um novo profile, pode ser baseado em qualquer uma das configurações
+e clique em **Ok**.
+
+![Report](imgs/checkstyle-ide-eclipse-formatter.png)
+
+Feito isso clique em **Edit** para editar o profile que você acabou de criar, na caixa suspensa
+**Tab Policy** deixe selecionada a opção **Spaces only**:
+
+![Report](imgs/checkstyle-ide-eclipse-tab-policy.png)
+
+Feito isso, reinicie o Eclipse. Após reiniciá-lo clique com o botão direito do mouse em um arquivo
+Java e vá até a opção **Checkstyle -> Check Code with Checkstyle** e a verificação será feita e os 
+pontos a serem corrigidos serão levantados:
+
+![Report](imgs/checkstyle-ide-eclipse-check-code.png)
+
+A partir deste ponto basta selecionar todo o código com **CTRL + A** e depois clicar com o botão
+direito do mouse e selecionar a opção **Apply Checkstyle fixes**. O próprio plugin fará algumas 
+correções conforme configurado. Para correções adicionais de formatação selecione novamente o código clique com o botão direito do mouse indo até **Source -> Format**. Aplicados os dois passos
+de formatação acima execute novamente a verificação do arquivo com o **Checkstyle -> Check Code with Checkstyle** e observe que alguns tipos de correções relacionadas a formatação foram
+realizadas:
+
+![Report](imgs/checkstyle-ide-eclipse-after-check-code.png)
+
+Pronto! Agora o código está formatado conforme as regras do checkstyle. Lembre-se que algumas
+das modificações sugeridas pelo ``` # mvn checkstyle:check ``` devem ser feitas manualmente pois
+os plugins ainda não conseguem atendê-las.
+
+
 ## Artigos relevantes
 
  - [Java com Checkstyle](https://www.devmedia.com.br/java-com-checkstyle/26043)
