@@ -129,7 +129,7 @@ Deverá ficar assim:
 Caso seu projeto já contenha outras configurações no `<properties>`, esta deverá ser mais uma delas.
 
 
-Na sequência, procure pela área de *<build><plugins>* do seu *pom.xml* - Caso não exista, você pode criar esta na raiz do seu *pom.xml* e adicionar conforme exemplo abaixo (Já configurando o plugin do checkstyle):
+Na sequência, procure pela área de `<build><plugins>` do seu *pom.xml* - Caso não exista, você pode criar esta na raiz do seu *pom.xml* e adicionar conforme exemplo abaixo (Já configurando o plugin do checkstyle):
 
 ```
 <build>
